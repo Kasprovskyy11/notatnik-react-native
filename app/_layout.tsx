@@ -1,6 +1,29 @@
-import { Stack } from "expo-router";
+import { router, Stack } from "expo-router";
+import { StatusBar, TouchableOpacity, Text } from "react-native";
 import "./globals.css";
 
 export default function RootLayout() {
-  return <Stack />;
+  return (
+    <>
+      <StatusBar barStyle={"light-content"} backgroundColor="royalblue" />
+      <Stack
+        screenOptions={{
+          title: "Notatnik",
+          headerShown: true,
+          headerStyle: { backgroundColor: "royalblue" },
+          headerTintColor: "white",
+          headerTitleStyle: { fontWeight: "bold" },
+          headerRight: () => (
+            <TouchableOpacity
+              onPress={() => router.navigate("/sites/notatki")}
+              className="py-2 px-6 bg-slate-900 rounded-full"
+            >
+              <Text className="text-white  font-bold">Notatki</Text>
+            </TouchableOpacity>
+          ),
+        }}
+      />
+      ;
+    </>
+  );
 }
