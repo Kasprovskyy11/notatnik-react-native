@@ -29,7 +29,7 @@ export default function Notatki() {
     <>
       <View className="flex-1 bg-white p-4">
         <Text className="text-3xl text-center font-bold text-blue-500">
-          Hello
+          Notatki
         </Text>
         <FlatList
           data={notes}

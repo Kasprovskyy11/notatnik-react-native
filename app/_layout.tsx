@@ -16,9 +16,11 @@ export default function RootLayout() {
           headerRight: () => (
             <TouchableOpacity
               onPress={() => router.navigate("/sites/notatki")}
-              className="py-2 px-6 bg-slate-900 rounded-full"
+              className="py-2 px-6 bg-white rounded-full"
             >
-              <Text className="text-white  font-bold">Notatki</Text>
+              <Text className="text-[royalblue] font-bold uppercase">
+                Notatki
+              </Text>
             </TouchableOpacity>
           ),
         }}
